@@ -1,1 +1,3 @@
 When you have two stacks—a *parent* and a *child*—where the child references the parent via a `StackReference`, moving both stacks to a different organization can cause the child’s deployment to fail. This happens because the `StackReference` isn’t updated to reflect the new organization, even though its underlying value has changed. The `StackReference` is created using a variable, but modifying that variable does not produce a diff, so the child’s stack remains tied to the old reference.
+
+In order to use this program make sure you have a working pulumi cli and two organization. First run the program setting up the stacks, next transfer the stacks to the desired organization and run the program again while inserting your new organization name
