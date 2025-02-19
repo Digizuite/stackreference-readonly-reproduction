@@ -33,6 +33,8 @@ class Program
           orgName = "KeyShot";
         }
 
+        logger.LogInformation("orgname is {orgName}", orgName);
+
         var projectName = "keyshot-stackreference-reproduction";
         var stackName = "stackreference-reproduction";
 
@@ -71,5 +73,7 @@ class Program
             OnStandardOutput = Console.WriteLine,
             OnStandardError = Console.WriteLine
         });
+
+        logger.LogInformation("Done diddly done.");
     }
 }
